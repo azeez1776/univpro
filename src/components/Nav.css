@@ -1,0 +1,27 @@
+.nav {
+  position: relative;
+  left: 1020px;
+  top: -685px;
+  margin: 10px;
+  margin: 10px;
+  width: 300px;
+  z-index: 1000;
+}
+
+.nav > button {
+  padding: 10px;
+  width: 100px;
+  margin: 0px;
+  border: 0;
+  background-color: rgba(1, 1, 1, 0);
+  font-size: 15px;
+  font-family: "poppins";
+}
+
+.nav > button:hover {
+  background-image: linear-gradient(to right, #03045e, #023e8a);
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
