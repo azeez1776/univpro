@@ -1,16 +1,25 @@
 import './App.css';
-import Register from './components/Register';
+import Body from './Body';
+import Register from './components/Register.js';
+import Login from './components/Login.js';
 import Nav from './components/Nav';
 import ParticleBackground from './components/Particle';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <ParticleBackground />
-      <Nav />
-      <Register />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Router>
+                <ParticleBackground />
+                <Nav />
+                <Switch>
+                    <Route path="/" exact component={Body} />
+                    <Route path="/Register" exact component={Register} />
+                    <Route path="/Login" exact component={Login} />
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 export default App;
