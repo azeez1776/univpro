@@ -43,6 +43,15 @@ function Login() {
 
     return (
         <div className="login">
+            {/* <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: rgb(3, 5, 94);"></stop>
+                        <stop offset="100%" style="stop-color: rgb(2, 61, 138);"></stop>
+                    </linearGradient>
+                </defs>
+                <path id="blob" d="M379.5,349.5Q365,449,263,426.5Q161,404,96.5,327Q32,250,89,160.5Q146,71,260,52.5Q374,34,384,142Q394,250,379.5,349.5Z" fill="url(#gradient)"></path>
+            </svg> */}
             <div className="login_info">
                 <h2 style={{ position: 'relative', left: 70, top: -20 }}>Sign In</h2>
                 <form className={classes.root} onSubmit={formik.handleSubmit}>

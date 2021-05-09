@@ -2,15 +2,16 @@ import './App.css';
 import Body from './Body';
 import Register from './components/Register.js';
 import Login from './components/Login.js';
-import Nav from './components/Nav';
+import Nav from './components/Nav.js';
 import ParticleBackground from './components/Particle';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
     return (
         <div className="App">
+            <ParticleBackground />
+
             <Router>
-                <ParticleBackground />
                 <Nav />
                 <Switch>
                     <Route path="/" exact component={Body} />

@@ -1,7 +1,7 @@
 .nav {
-  position: relative;
+  position: absolute;
   left: 1020px;
-  top: -685px;
+  top: 0px;
   margin: 10px;
   margin: 10px;
   width: 300px;
@@ -22,7 +22,7 @@
 } */
 
 .nav_but:hover {
-  background-image: linear-gradient(to right, #03045e, #023e8a);
+  background-image: linear-gradient(to right, #03055e, #023d8a);
   border-radius: 10px;
   color: white;
   font-size: 15px;

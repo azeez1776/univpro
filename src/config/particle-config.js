@@ -109,4 +109,5 @@ const particleConfig = {
     retina_detect: true
 }
 
+
 export default particleConfig;
