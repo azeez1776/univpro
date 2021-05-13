@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Container from 'react-bootstrap/Container';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,7 +42,7 @@ function Register() {
                 .oneOf([yup.ref('password'), null], 'Password must match')
         }),
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
+            console.log(JSON.stringify(values, null, 2));
         },
     });
 
@@ -49,65 +50,67 @@ function Register() {
 
     return (
         <div className="register">
-            <div className="register_info">
-                <h2 style={{ position: 'relative', left: 50, top: -50 }}>Register</h2>
-                <form className={classes.root} onSubmit={formik.handleSubmit}>
-                    <TextField
-                        id="outlined-basic"
-                        label="username"
-                        variant="standard"
-                        name="username"
-                        value={formik.values.username}
-                        onChange={formik.handleChange}
-                    />
-                    {formik.touched.username && formik.errors.username ? (
-                        <div className="register_error">{formik.errors.username}</div>
-                    ) : null}
+            <Container fluid="md">
+                <div className="register_info">
+                    <h2 style={{ position: 'relative', left: 50, top: -50 }}>Register</h2>
+                    <form className={classes.root} onSubmit={formik.handleSubmit}>
+                        <TextField
+                            id="outlined-basic"
+                            label="username"
+                            variant="standard"
+                            name="username"
+                            value={formik.values.username}
+                            onChange={formik.handleChange}
+                        />
+                        {formik.touched.username && formik.errors.username ? (
+                            <div className="register_error">{formik.errors.username}</div>
+                        ) : null}
 
-                    <TextField
-                        id="outlined-basic"
-                        label="E-mail"
-                        variant="standard"
-                        name="email"
-                        value={formik.values.email}
-                        onChange={formik.handleChange} />
-                    {formik.touched.email && formik.errors.email ? (
-                        <div className="register_error">{formik.errors.email}</div>
-                    ) : null}
+                        <TextField
+                            id="outlined-basic"
+                            label="E-mail"
+                            variant="standard"
+                            name="email"
+                            value={formik.values.email}
+                            onChange={formik.handleChange} />
+                        {formik.touched.email && formik.errors.email ? (
+                            <div className="register_error">{formik.errors.email}</div>
+                        ) : null}
 
-                    <TextField
-                        id="outlined-password-input"
-                        label="Password"
-                        type="password"
-                        name="password"
-                        autoComplete="current-password"
-                        variant="standard"
-                        value={formik.values.password}
-                        onChange={formik.handleChange} />
-                    {formik.touched.password && formik.errors.password ? (
-                        <div className="register_error">{formik.errors.password}</div>
-                    ) : null}
+                        <TextField
+                            id="outlined-password-input"
+                            label="Password"
+                            type="password"
+                            name="password"
+                            autoComplete="current-password"
+                            variant="standard"
+                            value={formik.values.password}
+                            onChange={formik.handleChange} />
+                        {formik.touched.password && formik.errors.password ? (
+                            <div className="register_error">{formik.errors.password}</div>
+                        ) : null}
 
-                    <TextField
-                        id="outlined-password-input"
-                        label="Confirm Password"
-                        type="password"
-                        autoComplete="current-password"
-                        name="passwordConfirm"
-                        variant="standard"
-                        value={formik.values.passwordConfirm}
-                        onChange={formik.handleChange}
-                    />
-                    {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
-                        <div className="register_error">{formik.errors.passwordConfirm}</div>
-                    ) : null}
-                    <div className="register_sub">
-                        <input type="submit" value="Sign Up" className="register_but" />
-                    </div>
-                    <span class="register_psw">Already have an account? <a href="#" style={{ textDecoration: 'none' }}>Sign In</a></span>
-                </form>
+                        <TextField
+                            id="outlined-password-input"
+                            label="Confirm Password"
+                            type="password"
+                            autoComplete="current-password"
+                            name="passwordConfirm"
+                            variant="standard"
+                            value={formik.values.passwordConfirm}
+                            onChange={formik.handleChange}
+                        />
+                        {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
+                            <div className="register_error">{formik.errors.passwordConfirm}</div>
+                        ) : null}
+                        <div className="register_sub">
+                            <input type="submit" value="Sign Up" className="register_but" />
+                        </div>
+                        <span class="register_psw">Already have an account? <a href="#" style={{ textDecoration: 'none' }}>Sign In</a></span>
+                    </form>
 
-            </div>
+                </div>
+            </Container>
         </div>
     )
 }

@@ -1,13 +1,19 @@
 import React from 'react';
 import './Body.css';
+import { Container, Button } from 'react-bootstrap'
 
 
 
 
 function Body() {
+
+
+
   return (
     <div className="body">
-      <h1>Hello body</h1>
+      <Container fluid="md">
+        <Button style={{ position: 'absolute', top: '200px', left: '700px' }}>Fetch From API</Button>
+      </Container>
     </div>
   );
 }

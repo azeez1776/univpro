@@ -5,8 +5,12 @@ import Login from './components/Login.js';
 import Nav from './components/Nav.js';
 import ParticleBackground from './components/Particle';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+
+
     return (
         <div className="App">
             <ParticleBackground />
@@ -19,6 +23,7 @@ function App() {
                     <Route path="/Login" exact component={Login} />
                 </Switch>
             </Router>
+
         </div>
     );
 }
